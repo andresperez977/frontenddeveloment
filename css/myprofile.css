@@ -2,8 +2,20 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
+html{
+border: 5px solid  red;
 
+}
+body{
+
+    border: 2px dashed blue;
+}
 header{
     text-align: center;
     font-size: large;
+}
+
+.small-profile-img{
+    border: 3px;
+    border-radius: 50%;
 }
