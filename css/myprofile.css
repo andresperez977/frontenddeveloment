@@ -1,21 +1,52 @@
-*{
+* {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
-html{
-border: 5px solid  red;
+
+html {
+    border: 5px solid red;
 
 }
-body{
+
+body {
 
     border: 2px dashed blue;
 }
-header{
+
+header {
     text-align: center;
     font-size: large;
 }
 
-.small-profile-img{
+.small-profile-img {
     border: 3px;
     border-radius: 50%;
+}
+
+.about-me-column-2 {
+    width: 40%;
+    float: left;
+    height: 600px;
+    border: 8px dashed black;
+    margin: 10px;
+    border-radius: 3%;
+    margin: 10px;
+    padding: 15px;
+    margin-left: 50px;
+}
+
+section>h1 {
+    background-color: cadetblue;
+    text-align: center;
+}
+
+#about-me-colum-21 {
+    background-color: blue;
+
+}
+
+#about-me-column-22 {
+    background: url(../html/images/play5.jpg);
+    background-size: cover;
+    background-position: center;
 }
