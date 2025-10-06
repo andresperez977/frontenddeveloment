@@ -50,3 +50,17 @@ section>h1 {
     background-size: cover;
     background-position: center;
 }
+
+section{
+    clear: left;
+}
+
+.myprojects-column-4{
+width: 22%;
+float: left;
+background-color: bisque(112,223,223);
+padding: 20px;
+border: 3px solid black;
+height: 200px;
+text-align: center;
+}
