@@ -1,0 +1,32 @@
+*{
+    font-family:fantasy;
+    /* in order to make our text more responsive to size change of the viewport,
+    we have to use a relative unit not absolute unit like px
+    In this case, we use the viewport as our unifield reference.
+    2vw is equal to 2% of the width of the viewport
+      */
+    font-size: 1 vw;
+}
+div{
+border: 2px solid blueviolet;
+border-radius: 4px ;
+box-shadow: black 2px 2px;
+margin: 1vw;
+width: fit-content;
+position: sticky;
+}
+h2{
+  background-color: aqua;
+border: 2px solid yellow;
+width: fit-content;
+position: sticky;
+/* The following four parameters are used to control the position of this element
+ with respect to the viewport*/
+ /* The position of the top border of this element relative to the viewport*/
+top: 2px;
+left: 0px;
+right: 0px;
+bottom: auto;
+
+}
+
