@@ -14,10 +14,18 @@ div {
   box-shadow: black 2px 2px;
   margin: 1vw;
   width: fit-content;
-  position: sticky;
+  /*What the relative positioning does is that 
+  the element applied with relative positioning 
+  will remain in its original postion,when 
+  we change its postion using "left,right,top,bottom"
+  it moves relative to this original position
+  */
+  position: relative;
   padding: 1rem;
 }
-
+div:nth-child(odd){
+  left: 10vw;
+}
 h2 {
   background-color: aqua;
   border: 2px solid yellow;
