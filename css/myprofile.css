@@ -1,28 +1,30 @@
+/* APLICA LA MISMA FUENTE A TODO EL DOCUMENTO */
 * {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
+/* BORDE ROJO GENERAL PARA LA PÁGINA */
 html {
     border: 5px solid red;
-
 }
 
+/* BORDE AZUL PARA EL CUERPO */
 body {
-
     border: 2px dashed blue;
 }
 
+/* CABECERA CENTRADA Y CON TEXTO GRANDE */
 header {
     text-align: center;
     font-size: large;
 }
 
+/* IMAGEN PEQUEÑA REDONDEADA */
 .small-profile-img {
-    border: 3px;
     border-radius: 50%;
 }
 
+/* COLUMNA DE TEXTO "ABOUT ME" */
 .about-me-column-2 {
     width: 40%;
     float: left;
@@ -30,94 +32,96 @@ header {
     border: 8px dashed black;
     margin: 10px;
     border-radius: 3%;
-    margin: 10px;
     padding: 15px;
     margin-left: 50px;
 }
 
+/* TÍTULOS DE CADA SECCIÓN */
 section>h1 {
     background-color: cadetblue;
     text-align: center;
 }
 
+/* PRIMERA COLUMNA AZUL */
 #about-me-colum-21 {
     background-color: blue;
-
+    color: white;
 }
 
+/* SEGUNDA COLUMNA CON IMAGEN DE FONDO */
 #about-me-column-22 {
     background: url(../html/images/play5.jpg);
     background-size: cover;
     background-position: center;
 }
 
-section{
+/* LIMPIA LOS FLOTANTES */
+section {
     clear: left;
 }
 
-.myprojects-column-4{
-width: 22%;
-float: left;
-background-color: bisque(112,223,223);
-padding: 20px;
-border: 3px solid black;
-height: 200px;
-text-align: center;
+/* CADA BLOQUE DE JUEGO */
+.myprojects-column-4 {
+    width: 22%;
+    float: left;
+    background-color: rgb(255, 228, 196);
+    padding: 20px;
+    border: 3px solid black;
+    height: 200px;
+    text-align: center;
+    margin: 5px;
 }
 
-.projects-section>div:first{
-    background: url(../);
-    background-size: cover;
-    background-position: center;
-}
-.proji{
-
-}
-footer{
-    clear: both;
+/* TABLA DE JUGADORES */
+#experience-section>table {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-collapse: collapse; /* Une los bordes de la tabla */
 }
 
-.footer-icon-style{
+/* CELDAS DE LA TABLA DE JUGADORES */
+#experience-section>table>tr, td {
+    padding: 40px;
+    border: 2px solid rgb(109, 147, 152);
+}
+
+/* COLOR DIFERENTE PARA FILAS PARES */
+tr:nth-child(even) {
+    background-color: rgb(148, 166, 246);
+}
+
+/* IMÁGENES DE LOS JUGADORES (TODAS IGUALES) */
+#experience-section img {
+    width: 200px;      /* Ancho fijo */
+    height: 200px;     /* Alto fijo */
+    border-radius: 50%; /* Forma redonda */
+    object-fit: cover;  /* Ajusta la imagen sin deformarla */
+    margin-top: 10px;
+}
+
+/* ICONOS DEL PIE DE PÁGINA */
+.footer-icon-style {
     width: 30px;
     height: 30px;
 }
 
-section{
-    border: 2px solid yellow;
-    margin: 3px;
-}
-#experience-section>table{
-    width:100%;
-    /*pading-left: 100px; */
-
-
-    padding-top: 50px;
-    padding-bottom: 40px;
-    /*make the children borders collapse*/ 
-    border-collapse: collapse; 
-
-}
-#experience-section>table>tr, td{
-    padding: 40px;
-    border: 2px solid rgb(109, 147, 152);
-    /*border-collapse: collapse;*/
-}
-/* :nth-child(odd) is used to select all odd chidren elements of a type */
-/* :nth-child(even) is used to select all even children elements of a type*/
-tr:nth-child(even){
-    background-color: rgb(148, 166, 246);
-}
-.footer-content-left{
+/* PIE DE PÁGINA: IZQUIERDA */
+.footer-content-left {
     float: left;
 }
-.footer-content-right{
+
+/* PIE DE PÁGINA: DERECHA */
+.footer-content-right {
     float: right;
     font-size: 10px;
 }
-a{
+
+/* ENLACES CON EFECTO HOVER */
+a {
     padding: 20px;
     transition: all 1s linear;
 }
-a:hover{
+a:hover {
     font-size: 20px;
 }
