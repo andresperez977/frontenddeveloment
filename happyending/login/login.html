@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Indica que el documento usa HTML5 -->
+<html lang="es">
+
+<head>
+    <!-- Define el conjunto de caracteres para evitar errores con acentos y ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Permite que la página se adapte correctamente a móviles y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que aparece en la pestaña del navegador -->
+    <title>Página de Login</title>
+
+    <!-- Enlaza este archivo HTML con la hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 
+        Contenedor principal del login.
+        Se utiliza para agrupar todo el formulario y poder centrarlo
+        y darle estilo con CSS.
+    -->
+    <div class="login-container">
+
+        <!-- Título visible del formulario -->
+        <h2>Iniciar sesión</h2>
+
+        <!-- 
+            Formulario de inicio de sesión.
+            Aquí se introducen los datos que el usuario enviará.
+        -->
+        <form>
+
+            <!-- 
+                Etiqueta asociada al campo de usuario.
+                El atributo "for" conecta la etiqueta con el input.
+            -->
+            <label for="usuario">Usuario</label>
+
+            <!-- 
+                Campo de texto para introducir el nombre de usuario.
+                "required" obliga a rellenar el campo antes de enviar.
+            -->
+            <input type="text" id="usuario" placeholder="Introduce tu usuario" required>
+
+            <!-- Etiqueta del campo contraseña -->
+            <label for="password">Contraseña</label>
+
+            <!-- 
+                Campo para introducir la contraseña.
+                El tipo "password" oculta los caracteres escritos.
+            -->
+            <input type="password" id="password" placeholder="Introduce tu contraseña" required>
+
+            <!-- 
+                Botón que envía el formulario.
+                De momento no envía datos a ningún servidor,
+                solo sirve como ejemplo visual.
+            -->
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <!-- 
+            Enlace adicional (opcional).
+            Simula un acceso para recuperar la contraseña.
+        -->
+        <a href="#" class="link">¿Has olvidado la contraseña?</a>
+
+    </div>
+
+</body>
+
+</html>

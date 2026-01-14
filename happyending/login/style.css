@@ -1,0 +1,138 @@
+/* 
+    Selector universal:
+    Elimina los estilos por defecto del navegador
+    para que la página se vea igual en todos.
+*/
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Hace que el padding y el borde no aumenten el tamaño del elemento */
+    box-sizing: border-box;
+
+    /* Fuente común para toda la página */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+    Estilos generales del body (toda la página)
+*/
+body {
+    /* Fondo con degradado para mejorar el aspecto visual */
+    background: linear-gradient(135deg, #721e5d, #982a8f);
+
+    /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
+
+    /* Flexbox para centrar el contenido */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+/* 
+    Caja blanca donde está el formulario
+*/
+.login-container {
+    background-color: white;
+
+    /* Espacio interior del contenedor */
+    padding: 30px;
+
+    /* Anchura fija en pantallas grandes */
+    width: 350px;
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Sombra para dar efecto de tarjeta */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del formulario */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 
+    Estilo de las etiquetas (label)
+*/
+.login-container label {
+    display: block;
+    /* Coloca cada etiqueta en una línea */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 
+    Campos de entrada de texto y contraseña
+*/
+.login-container input {
+    width: 100%;
+    /* Ocupan todo el ancho del contenedor */
+    padding: 10px;
+    margin-top: 5px;
+
+    /* Bordes suaves */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 
+    Botón de enviar
+*/
+.login-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+
+    /* Color principal del botón */
+    background-color: #982a2a;
+    color: white;
+
+    /* Elimina el borde por defecto */
+    border: none;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Transición suave al cambiar de color */
+    transition: background-color 0.3s;
+}
+
+/* 
+    Extra:
+    Cambia el color del botón cuando el ratón pasa por encima
+*/
+.login-container button:hover {
+    background-color: #721e48;
+}
+
+/* 
+    Enlace situado debajo del formulario
+*/
+.login-container .link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+
+    /* Quita el subrayado */
+    text-decoration: none;
+
+    color: #982a7c;
+}
+
+/* 
+    Extra:
+    Diseño responsive para pantallas pequeñas (móviles)
+*/
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        /* Se adapta al tamaño de la pantalla */
+        padding: 20px;
+    }
+}
