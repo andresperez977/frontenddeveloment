@@ -1,0 +1,25 @@
+*{
+    background-color: blue;
+    font-family: cursive;
+}
+
+@media screen and (width< 200px){
+    *{
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+@media screen and (width< 350px){
+    *{
+    background-color: rgb(9, 255, 0);
+    font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+@media screen and (width< 650px){
+    *{
+    background-color: rgb(0, 47, 255);
+    font-family: 'Times New Roman', Times, serif;
+    }
+}
