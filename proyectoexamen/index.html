@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- Indica que el documento usa HTML5 -->
+<html lang="es">
+<head>
+
+  <!-- Permite usar caracteres especiales como tildes o ñ -->
+  <meta charset="UTF-8">
+
+  <!-- 
+    Hace que la web se adapte al ancho del dispositivo.
+    Es imprescindible para que el diseño responsive funcione.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Texto que aparece en la pestaña del navegador -->
+  <title>UrbanWear | Tienda de Camisetas</title>
+
+  <!-- Enlace al archivo CSS donde se define el diseño -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- 
+    Contenedor principal de toda la página.
+    Se usará como GRID para organizar:
+    header, aside, main y footer.
+  -->
+  <div class="layout">
+
+    <!-- ================= HEADER ================= -->
+    <!-- Zona superior de la página (nombre y descripción) -->
+    <header class="header">
+
+      <!-- Título principal de la web -->
+      <h1>UrbanWEAR</h1>
+
+      <!-- Subtítulo explicativo -->
+      <p>Página de venta de camisetas urbanas</p>
+
+    </header>
+
+    <!-- ================= ASIDE ================= -->
+    <!-- Barra lateral con el menú de navegación -->
+    <aside class="aside">
+
+      <!-- 
+        Menú de navegación.
+        Se ordenará con FLEXBOX en columna.
+      -->
+      <nav class="nav">
+
+        <!-- Enlaces de navegación -->
+        <a href="#">Inicio</a>
+        <a href="#">Camisetas</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+
+      </nav>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <!-- Contenido principal de la página -->
+    <main class="main">
+
+      <!-- ================= HERO ================= -->
+      <!-- 
+        Sección principal de impacto visual.
+        Explica de qué va la web.
+      -->
+      <section class="hero">
+
+        <h2>Viste tu estilo urbano</h2>
+
+        <!-- Texto descriptivo de la tienda -->
+        <p>
+          UrbanWear es una tienda online de camisetas urbanas
+          dirigida a jóvenes, con diseños modernos y estilo streetwear.
+        </p>
+
+      </section>
+
+      <!-- ================= SERVICIOS ================= -->
+      <!-- Explicamos qué ofrece la tienda -->
+      <section class="services">
+
+        <!-- Título de la sección -->
+        <h2>¿Qué ofrecemos?</h2>
+
+        <!-- 
+          Contenedor de servicios.
+          Usamos FLEXBOX para colocar los artículos.
+        -->
+        <div class="services-list">
+
+          <!-- Servicio individual -->
+          <article class="service">
+            <h3>👕 Camisetas exclusivas</h3>
+            <p>Diseños únicos inspirados en la moda urbana actual.</p>
+          </article>
+
+          <article class="service">
+            <h3>🚚 Envíos rápidos</h3>
+            <p>Envíos a toda España en 24-48 horas.</p>
+          </article>
+
+          <article class="service">
+            <h3>💳 Pago seguro</h3>
+            <p>Pagos protegidos y seguros para el cliente.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ================= MARCAS / TARJETAS ================= -->
+      <!-- Tarjetas informativas -->
+      <section class="cards">
+
+        <article class="card">
+          <h3>StreetStyle</h3>
+          <p>Moda urbana inspirada en la calle.</p>
+        </article>
+
+        <article class="card">
+          <h3>WearIt</h3>
+          <p>Camisetas modernas y minimalistas.</p>
+        </article>
+
+        <article class="card">
+          <h3>UrbanTees</h3>
+          <p>Diseños urbanos a precios accesibles.</p>
+        </article>
+
+      </section>
+
+      <!-- ================= CONTACTO ================= -->
+      <!-- Información de contacto -->
+      <section class="contact">
+
+        <h2>Contacto</h2>
+
+        <!-- 
+          Contenedor de datos.
+          Se organiza con FLEXBOX.
+        -->
+        <div class="contact-info">
+
+          <p>📧 Email: contacto@urbanwear.com</p>
+          <p>📞 Teléfono: +34 612 345 678</p>
+          <p>📍 Ubicación: Madrid, España</p>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Parte inferior de la página -->
+    <footer class="footer">
+      <p>© 2026 UrbanWear · Proyecto CSS Responsive</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
