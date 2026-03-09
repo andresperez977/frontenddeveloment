@@ -19,6 +19,18 @@ const timeDisplay = document.getElementById("timerDisplay");
 console.log(timeDisplay);
 //Associate an element with a type of event and an action
 //that we want to respond to the event 
+let fontSize = 4;
 start.addEventListener("click",()=>{
-    console.debug("jajaaj")
+    fontSize++;
+    console.log("jajaaj");
+    start.style.fontSize = fontSize + "px";
 });
+//annonymous fuction
+console.log(stop);
+stop.addEventListener("click",function (){
+    console.log("hehehe");
+});
+function resetBtnHandler(){
+    console.log("wowowo");
+}
+reset.addEventListener("click", resetBtnHandler);
