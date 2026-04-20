@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Define el idioma de la página -->
+
+<head>
+<meta charset="UTF-8"> <!-- Permite usar caracteres como á, ñ, etc -->
+<title>Página de Andrés</title> <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+
+<script>
+
+// Creamos un título para la página
+const titulo = document.createElement("h1"); // Creamos un elemento h1 (título grande)
+titulo.textContent = "Página de Andrés"; // Texto que aparecerá en el título
+document.body.appendChild(titulo); // Añadimos el título al body de la página
+
+// Creamos un párrafo con contenido estático
+const texto = document.createElement("p"); // Creamos un elemento párrafo
+texto.textContent = "Esta página ha sido creada usando solo JavaScript."; // Texto del párrafo
+document.body.appendChild(texto); // Añadimos el párrafo a la página
+
+// Creamos otro párrafo explicando la animación
+const texto2 = document.createElement("p"); // Creamos otro párrafo
+texto2.textContent = "Debajo puedes ver un cuadrado creado y animado con JavaScript."; // Texto informativo
+document.body.appendChild(texto2); // Lo añadimos al body
+
+// Creamos un cuadrado usando JavaScript
+const cuadrado = document.createElement("div"); // Creamos un div que será el cuadrado
+cuadrado.style.width = "100px"; // Anchura del cuadrado
+cuadrado.style.height = "100px"; // Altura del cuadrado
+cuadrado.style.backgroundColor = "red"; // Color del cuadrado
+cuadrado.style.position = "absolute"; // Posición absoluta para poder moverlo
+cuadrado.style.left = "0px"; // Posición inicial horizontal
+cuadrado.style.top = "200px"; // Posición vertical en la página
+
+// Añadimos el cuadrado al body
+document.body.appendChild(cuadrado); // El cuadrado ya aparece en la página
+
+// Variable que guarda la posición actual del cuadrado
+let posicion = 0; // Empieza en 0
+
+// Función que se encargará de mover el cuadrado
+function animarCuadrado() {
+
+    posicion += 3; // Cada vez que se ejecute la función el cuadrado se moverá 3 píxeles
+
+    cuadrado.style.left = posicion + "px"; // Cambiamos la posición horizontal del cuadrado
+
+    // Si el cuadrado llega al final de la pantalla vuelve al inicio
+    if (posicion > window.innerWidth) {
+        posicion = -100; // Lo colocamos fuera de la pantalla para empezar otra vez
+    }
+}
+
+// Ejecutamos la función cada 20 milisegundos para crear la animación
+setInterval(animarCuadrado, 20);
+
+</script>
+
+</body>
+</html>

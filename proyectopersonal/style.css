@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES (CLAVE) */
+:root {
+  --bg: #f0f2f5;
+  --text: #222;
+  --card-bg: #ffffff;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* GRID */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+/* HEADER */
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* BOTONES */
+.controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-btn {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* ASIDE */
+.aside {
+  grid-area: aside;
+  background-color: var(--card-bg);
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+/* MAIN */
+.main {
+  grid-area: main;
+  padding: 2rem;
+}
+
+/* HERO */
+.hero {
+  min-height: 30vh;
+  background: linear-gradient(135deg, #06b6d4, #22c55e);
+  color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* SERVICES */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1.2rem;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1.2rem;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 4rem;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .services-list {
+    flex-direction: row;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 260px 1fr;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
+}
+
+/* TEMAS */
+body.light {
+  --bg: #f0f2f5;
+  --text: #222;
+  --card-bg: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+}
+
+body.neon {
+  --bg: #000000;
+  --text: #39ff14;
+  --card-bg: #111111;
+}
+
+body.forest {
+  --bg: #1b2e1b;
+  --text: #e6ffe6;
+  --card-bg: #2e4d2e;
+}
