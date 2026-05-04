@@ -2,9 +2,37 @@
 const MIN_PARTICICLE_SIZE = 0.2;
 const MIN_SPEED_X = 1;
 const MIN_SPEED_Y = 1;
-window.addEventListener('mousemove', (e)=>{});
+const NUM_OF_PARTICLES = 10;
+const canvas =document.getElementById("smoke_canvas")
+  const ctx =canvas.getContext("2d");
+  //define the color that ww want to use for our drawings
+  ctx.fillStyle =' rgb(118, 76, 161)';
+  //
+  ctx.beginPath();
+  ctx.arc(2,3,2,0, Math.PI * 2);
+
+  ctx.fill();
+
+
+
 class Smoke{
+    constructor(){
+        this.particles = [];
+        
+    }
+    add(particle){
+    this.particles.push(particle);
 }
+animate(){
+    for (let index = 0; index < this.particles.length; index++) {
+        //update the states of the particles and draw 
+        this.particles[index].update();
+        
+    }
+    requestAnimationFrame(this.animate);
+}
+}
+
 
 class Particle{
 
@@ -13,7 +41,34 @@ class Particle{
         this.color =' rgb(68, 70, 102)'
         this.speedX = Math.random() * 2 + MIN_SPEED_X;
          this.speedY = Math.random() * 2 + MIN_SPEED_Y;
-         this.x=x;
-         this.y=y;
+         this.x= Math.random() * 2 + x;
+         this.y= Math.random() * 2 +y;
+    }
+    //update the current states of a particle
+    update(){
+        this.size -=1;
+        this.draw();
+    }
+    draw(){
+       ctx.fillStyle = this.color;
+  //
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+
+  ctx.fill(); 
     }
 }
+
+const smoke = new Smoke();
+window.addEventListener('mousemove', (e)=>{
+console.log(e);
+console.log(e.clientX);
+console.log(e.clientY);
+for (let index = 0; index <  NUM_OF_PARTICLES; index++) {
+    const particle = new Particle(e.clientX,e.clientY);
+    smoke.add(particle);
+    console.log(smoke.particles); 
+}
+
+});
+smoke.animate();
